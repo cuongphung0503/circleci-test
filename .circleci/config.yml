@@ -25,7 +25,7 @@ jobs:
       # Download và cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "config.yml" }}
+          - v1-dependencies-
           # fallback to using the latest cache if no exact match is found
 
       - run: mvn dependency:go-offline
@@ -33,7 +33,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-          key: v1-dependencies-{{ checksum "config.yml" }}
+          key: v1-dependencies-
         
       # Chạy test
       - run: mvn integration-test
