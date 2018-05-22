@@ -5,5 +5,5 @@ jobs:
     -image: circleci/java:8
   steps:
     -checkout
-    -run: echo "
+    -run: echo "OK"
   
